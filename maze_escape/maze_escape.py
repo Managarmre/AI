@@ -9,8 +9,6 @@
 
 # import
 import argparse
-from pygame.locals import *
-import pygame
 import random
 
 # get parameters
