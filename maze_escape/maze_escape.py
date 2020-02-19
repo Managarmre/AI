@@ -18,6 +18,7 @@ def argparser():
     '''
     parser = argparse.ArgumentParser(description='file to create maze')
     parser.add_argument('file',help='maze structure')
+    parser.add_argument('-mG','--maxGames',default=10,type=int,help='number maximum of steps to explore the maze')
     parser.add_argument('--verbose',help='verbose mode',action='store_true')
     parser.add_argument('--display',help='a simple display mode',action='store_true')
     return parser.parse_args()
@@ -224,6 +225,7 @@ class Bot:
 def main():
     arg = argparser()
     mazeFile = arg.file
+    maxGames = arg.maxGames
     verbose = arg.verbose
     display = arg.display
 
@@ -234,7 +236,7 @@ def main():
 
     bot = Bot(maze,display)
 
-    bot.explore(10)
+    bot.explore(maxGames)
 
     if (verbose):
         print(bot.qMatrix)
