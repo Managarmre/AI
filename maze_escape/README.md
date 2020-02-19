@@ -4,7 +4,7 @@ A simple implementation of Q learning to solve a maze.
 
 ## How to use
 
-`python .\maze_escape.py .\simple_maze.txt`
+`python .\maze_escape.py .\simple_maze.txt` [-mG int] [--verbose] [--display]
 
 ## Caption for maze txt file
 
