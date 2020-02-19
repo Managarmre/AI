@@ -16,7 +16,7 @@ def argparser():
     '''
         parameters function
     '''
-    parser = argparse.ArgumentParser(description='file to create maze')
+    parser = argparse.ArgumentParser(description='file to resolve maze with q learning')
     parser.add_argument('file',help='maze structure')
     parser.add_argument('-mG','--maxGames',default=10,type=int,help='number maximum of steps to explore the maze')
     parser.add_argument('--verbose',help='verbose mode',action='store_true')
